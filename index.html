@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Investment Platform</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS -->
+</head>
+<body>
+
+<!-- Header and Navigation -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#market">Market</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#trade">Trade</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#signup">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+<script src="https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js"></script>
+<gecko-coin-price-marquee-widget locale="en" outlined="true" coin-ids="" initial-currency="usd"></gecko-coin-price-marquee-widget>
+<!-- Banner Section -->
+<section id="banner">
+    <div class="banner-content">
+        <h1>Invest in Cryptocurrencies Today!</h1>
+        <p>Start your crypto investment journey with the best in the market.</p>
+        <button onclick="window.location.href='#trade'">Start Trading</button>
+    </div>
+</section>
+
+<!-- Market Overview Section -->
+<section id="market" class="section">
+    <h2>Market Overview</h2>
+    <div class="crypto-list">
+        <div class="crypto-item">
+            <h3>Bitcoin (BTC)</h3>
+            <p class="price" id="bitcoin-price">$50,000.00</p>
+            <button class="buy-sell-btn" onclick="window.location.href='#trade'">Buy/Sell</button>
+        </div>
+        <div class="crypto-item">
+            <h3>Ethereum (ETH)</h3>
+            <p class="price" id="ethereum-price">$4,000.00</p>
+            <button class="buy-sell-btn" onclick="window.location.href='#trade'">Buy/Sell</button>
+        </div>
+        <div class="crypto-item">
+            <h3>Litecoin (LTC)</h3>
+            <p class="price" id="litecoin-price">$200.00</p>
+            <button class="buy-sell-btn" onclick="window.location.href='#trade'">Buy/Sell</button>
+        </div>
+    </div>
+</section>
+<script src="https://widgets.coingecko.com/gecko-coin-list-widget.js"></script>
+<gecko-coin-list-widget locale="en" outlined="true" coin-ids="" initial-currency="usd"></gecko-coin-list-widget>
+<!-- Portfolio Section -->
+<section id="portfolio" class="section">
+    <h2>Your Portfolio</h2>
+    <div class="portfolio">
+        <div class="portfolio-item">
+            <h3>Bitcoin</h3>
+            <p>Amount: <span id="btc-amount">1.5</span> BTC</p>
+            <p>Current Value: $<span id="btc-value">75,000.00</span></p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Ethereum</h3>
+            <p>Amount: <span id="eth-amount">10</span> ETH</p>
+            <p>Current Value: $<span id="eth-value">40,000.00</span></p>
+        </div>
+    </div>
+</section>
+
+<!-- Trading Section -->
+<section id="trade" class="section">
+    <h2>Trade Cryptocurrencies</h2>
+    <form id="trade-form" onsubmit="handleTrade(event)">
+        <label for="crypto-select">Choose a cryptocurrency:</label>
+        <select id="crypto-select" name="crypto" required>
+            <option value="BTC">Bitcoin (BTC)</option>
+            <option value="ETH">Ethereum (ETH)</option>
+            <option value="LTC">Litecoin (LTC)</option>
+        </select>
+
+        <label for="amount">Amount to Buy/Sell:</label>
+        <input type="number" id="amount" name="amount" min="0.01" step="any" required>
+
+        <label for="trade-type">Select Action:</label>
+        <select id="trade-type" name="trade-type" required>
+            <option value="buy">Buy</option>
+            <option value="sell">Sell</option>
+        </select>
+
+        <button type="submit">Place Order</button>
+    </form>
+</section>
+
+<!-- Login Section -->
+<section id="login" class="section">
+    <h2>Login</h2>
+    <form id="login-form" onsubmit="handleLogin(event)">
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" name="email" required>
+
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+</section>
+
+<!-- Sign-Up Section -->
+<section id="signup" class="section">
+    <h2>Sign Up</h2>
+    <form id="signup-form" onsubmit="handleSignUp(event)">
+        <label for="signup-email">Email:</label>
+        <input type="email" id="signup-email" name="email" required>
+
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" name="password" required>
+
+        <button type="submit">Sign Up</button>
+    </form>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Crypto Investment Platform. All rights reserved.</p>
+</footer>
+
+<script src="scripts.js"></script> <!-- Link to your external JS -->
+</body>
+</html>
